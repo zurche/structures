@@ -1,5 +1,7 @@
 package com.zurche.stackapp.structure.stack;
 
+import com.zurche.stackapp.structure.model.Order;
+
 /**
  * @author alejandro.zurcher
  *
@@ -8,7 +10,7 @@ package com.zurche.stackapp.structure.stack;
 
 public interface OrderStackActions {
 
-    void push(int number);
+    void push(Order newOrder);
 
-    int pop();
+    Order pop() throws Exception;
 }

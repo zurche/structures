@@ -8,7 +8,7 @@ import com.zurche.stackapp.structure.model.Order;
  * A Single Linked List that stores {@link Order} values.
  */
 
-public interface OrderSingleLinkedList {
+public interface OrderSingleLinkedListActions {
 
     void insertFirst(Order data);
 
@@ -16,6 +16,11 @@ public interface OrderSingleLinkedList {
 
     void clear();
 
-    int search(int orderId);
+    Order search(int orderId) throws Exception;
 
+    Order getFirst() throws Exception;
+
+    Order getLast() throws Exception;
+
+    void remove(int orderIdToRemove) throws Exception;
 }

@@ -8,13 +8,13 @@ package com.zurche.stackapp.structure.model;
 
 public class Order {
 
-    private float totalPrice;
+    private double totalPrice;
     private int orderId;
     private String meal;
     private String drink;
     private String clientName;
 
-    public float getTotalPrice() {
+    public double getTotalPrice() {
         return totalPrice;
     }
 
@@ -34,7 +34,7 @@ public class Order {
         return clientName;
     }
 
-    public void setTotalPrice(float totalPrice) {
+    public void setTotalPrice(double totalPrice) {
         this.totalPrice = totalPrice;
     }
 
@@ -52,5 +52,16 @@ public class Order {
 
     public void setClientName(String clientName) {
         this.clientName = clientName;
+    }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "totalPrice=" + totalPrice +
+                ", orderId=" + orderId +
+                ", meal='" + meal + '\'' +
+                ", drink='" + drink + '\'' +
+                ", clientName='" + clientName + '\'' +
+                '}';
     }
 }

@@ -5,15 +5,31 @@ import com.zurche.stackapp.structure.model.Order;
 /**
  * @author alejandro.zurcher
  *
- * The actions that any Node that stores {@link Order} objects in a {@link OrderSingleLinkedList}
- * must implement.
+ * The concrete implementation of a Node of List that holds {@link Order} data.
  */
 
-public interface OrderNode {
+public class OrderNode implements OrderNodeActions {
 
-    void setData(Order orderData);
+    private Order orderData;
+    private OrderNode nextNode;
 
-    void setNext(OrderNode orderNode);
+    @Override
+    public void setData(Order orderData) {
+        this.orderData = orderData;
+    }
 
-    OrderNode getNext();
+    @Override
+    public Order getData() {
+        return this.orderData;
+    }
+
+    @Override
+    public void setNext(OrderNode nextNode) {
+        this.nextNode = nextNode;
+    }
+
+    @Override
+    public OrderNode getNext() {
+        return this.nextNode;
+    }
 }
